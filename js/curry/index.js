@@ -1,10 +1,10 @@
 Function.prototype.curry = function(...args) {
-	const curry = (fn, ...args) =>
-  		(fn.length <= args.length)
-			? fn(...args)
-    		: (...more) => curry(fn, ...args, ...more);
+  const curry = (fn, ...args) =>
+    (fn.length <= args.length)
+      ? fn(...args)
+      : (...more) => curry(fn, ...args, ...more);
 
-	return curry(this, ...args);
+  return curry(this, ...args);
 }
 
 function abc(a, b, c) {
