@@ -1,11 +1,30 @@
+.wrapper{
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto;
+  grid-template-areas:
+          "r b"
+          "g b";
+}
+.wrapper > div {
+  cursor: pointer;
+
+}
+
 .red {
+  grid-area: r;
   background: #900;
 }
 
 .green {
+  grid-area: g;
   background: #090;
 }
 
 .blue {
+  grid-area: b;
   background: #009;
 }
